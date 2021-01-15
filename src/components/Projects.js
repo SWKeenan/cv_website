@@ -30,7 +30,7 @@ export default class Projects extends React.Component{
                         <div className="loadingScreenWrapper">
                         <div className="loadingScreenTitle">Loading...</div>
                         <p className="loadingScreenSubtitle">Retreiving the data, please wait.</p>
-                        <img src={loader} className="loadingScreenImage" />
+                        <img src={loader} className="loadingScreenImage" alt="loading" />
                         </div>
                     </div>
                 </div>
@@ -47,13 +47,13 @@ export default class Projects extends React.Component{
                                     <div className="projectsItem">
                                         <div className="imageBox">
                                         <Link to={`/projects/${project.slug}`}>
-                                            <img src={project.image} className="projectsItemImage" />
+                                            <img src={project.image} className="projectsItemImage" alt={project.name} />
                                         </Link>
                                         </div>
                                         <div className="projectsItemTitle" >{project.name}</div>
                                         <div className="projectsItemDescription" >{project.description}</div>
                                         {project.languagesUsed.map(item =>
-                                        <img src={item.image} className="projectsLanguages" title={item.name} />
+                                        <img src={item.image} className="projectsLanguages" title={item.name} alt={item.name} />
                                             )}
                                         <Link to={`/projects/${project.slug}`}>
                                             <p className="projectsLearnMore">Learn More</p>

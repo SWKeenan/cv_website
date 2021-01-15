@@ -26,7 +26,7 @@ export default class Home extends React.Component{
                                 </Link>
                             </div>
                             <div className="homepageIcons">
-                                <a href="https://github.com/SWKeenan" target="_blank">
+                                <a href="https://github.com/SWKeenan" target="_blank" rel="noreferrer">
                                 <img alt="github" src={github} />
                                 <p className="homepageIconsText">Github</p>
                                 </a>

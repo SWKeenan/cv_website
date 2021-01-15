@@ -28,7 +28,7 @@ export default class Skills extends React.Component{
                         <div className="loadingScreenWrapper">
                         <div className="loadingScreenTitle">Loading...</div>
                         <p className="loadingScreenSubtitle">Retreiving the data, please wait.</p>
-                        <img src={loader} className="loadingScreenImage" />
+                        <img src={loader} className="loadingScreenImage" alt="loading" />
                         </div>
                     </div>
                 </div>
@@ -43,7 +43,7 @@ export default class Skills extends React.Component{
                         <div className="skillsListWrapper">
                             {this.state.skills.filter(skill => !skill.name.includes('Y')).map(skill => 
                             <div className="skillsItem">
-                                <img src={skill.image} className="skillsItemImage" />
+                                <img src={skill.image} className="skillsItemImage" alt={skill.name} />
                                 <div className="skillsItemText" >{skill.name}</div>
                             </div>
                             )

@@ -31,7 +31,7 @@ export default class ProjectDetail  extends React.Component{
                         <div className="loadingScreenWrapper">
                         <div className="loadingScreenTitle">Loading...</div>
                         <p className="loadingScreenSubtitle">Retreiving the data, please wait.</p>
-                        <img src={loader} className="loadingScreenImage" />
+                        <img src={loader} className="loadingScreenImage" alt="loading" />
                         </div>
                     </div>
                 </div>
@@ -44,11 +44,11 @@ export default class ProjectDetail  extends React.Component{
                         <div key={project.id}>
                             <p className="detailsTitle">{project.name}</p>  
                             <div className="languagesListWrapper">
-                            {project.languagesUsed.map(language => <img src={language.image} className="languagesList" title={language.name} />)}   
+                            {project.languagesUsed.map(language => <img src={language.image} className="languagesList" title={language.name} alt={language.name} />)}   
                             </div>
                                 <div className="detailsWrapper">
                                     <div className="detailsImageBox">
-                                    <img src={project.image} className="detailsImage" />
+                                    <img src={project.image} className="detailsImage" alt={project.name} />
                                     </div>
                                     <div className="detailsDescriptionBox">
                                         <Link to={'/projects'}>
@@ -60,7 +60,7 @@ export default class ProjectDetail  extends React.Component{
                                         <ul>
                                             {project.skills.map(skill => <li className="detailsDescriptionSkills">{skill.text}</li> )}
                                         </ul>
-                                        {project.links.map(link => <a target="_blank" href={link.link}><p className="detailsButton">{link.name}</p></a> )}
+                                        {project.links.map(link => <a target="_blank" href={link.link} rel="noreferrer"><p className="detailsButton">{link.name}</p></a> )}
                                     </div>
                                 </div>
                         </div>
