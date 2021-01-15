@@ -17,7 +17,6 @@ export default class Projects extends React.Component{
       .then(res => {
         const projects = res.data;
         this.setState({ projects, loading: false, });
-        console.log(projects);
       })
     }
 

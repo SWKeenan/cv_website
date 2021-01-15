@@ -15,7 +15,6 @@ export default class Skills extends React.Component{
       .then(res => {
         const skills = res.data;
         this.setState({ skills, loading: false, });
-        console.log(skills);
       })
     }
     
