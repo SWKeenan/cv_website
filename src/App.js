@@ -13,8 +13,8 @@ function App() {
         <nav>
           <ul className="navbarContactBox">
             <Link to="/"><li className="navbarContact">Home</li></Link>
-            <Link to="/skills"><li className="navbarContact">Skills</li></Link>
             <Link to="/projects"><li className="navbarContact">Projects</li></Link>
+            <Link to="/skills"><li className="navbarContact">Skills</li></Link>
             <a href="mailto:shanewilliamkeenan@gmail.com"><li className="navbarContact">Contact</li></a>
           </ul>
         </nav>
