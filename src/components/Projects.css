@@ -11,6 +11,52 @@
   flex: 1;
 }
 
+.buttonsFilter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+button,
+input[type='submit'],
+input[type='image'],
+input[type='reset'] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  transition: transform 0.3s ease-out;
+}
+
+input[type='image']:focus {
+  filter: invert(26%) sepia(50%) saturate(800%) hue-rotate(231deg)
+    brightness(94%) contrast(88%);
+  transition-duration: 0.5s;
+  transform: scale(1.6);
+}
+
+.btns input {
+  width: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 10px;
+  height: auto;
+  filter: invert(78%) sepia(22%) saturate(5963%) hue-rotate(211deg)
+    brightness(78%) contrast(95%);
+}
+.btns:hover img {
+  stroke: invert(28%) sepia(14%) saturate(2985%) hue-rotate(232deg)
+    brightness(93%) contrast(87%);
+}
+
+.btns:hover {
+  transition-duration: 0.5s;
+  transform: scale(1.1);
+}
+
 .projectsPurpleTopBackground {
   background-image: url(../assets/images/projectsTopBackground.svg);
   background-size: cover;
@@ -153,12 +199,25 @@
   }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 1000px) {
   .projectsItem {
     width: 90vw;
   }
 
   .projectsItemImage {
     width: 90vw;
+  }
+
+  .btns input {
+    width: 5vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .btns input {
+    width: 7vw;
+    padding: 0px;
   }
 }
