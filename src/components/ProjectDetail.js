@@ -3,6 +3,7 @@ import axios from 'axios'
 import { Link } from 'react-router-dom';
 import loader from '../assets/images/loader.gif';
 import './ProjectDetail.css';
+import { Helmet } from 'react-helmet';
 
 
 
@@ -26,6 +27,10 @@ export default class ProjectDetail  extends React.Component{
         if (loading){
             return (
                 <div className="container">
+                    <Helmet>
+                    <title>Loading...</title>
+                    <meta name="description" content="Irish web developer and programmer, capable in a wide variety of skills and languages. Check me out!" />
+                    </Helmet>
                     <div className="detailsPurpleBottomBackground" style={{height: '100vh'}}>
                         <div className="loadingScreenWrapper">
                         <div className="loadingScreenTitle">Loading...</div>
@@ -41,6 +46,10 @@ export default class ProjectDetail  extends React.Component{
                     <div className="detailsPurpleBottomBackground">
                     {this.state.project.map(project=>
                         <div key={project.id}>
+                            <Helmet>
+                            <title>{project.name}</title>
+                            <meta name="description" content={project.description} />
+                            </Helmet>
                             <p className="detailsTitle">{project.name}</p>  
                             <div className="languagesListWrapper">
                             {project.languagesUsed.map(language => <img src={language.image} className="languagesList" title={language.name} alt={language.name} />)}   

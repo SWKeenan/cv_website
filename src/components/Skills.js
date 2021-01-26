@@ -2,6 +2,7 @@ import React from 'react';
 import loader from '../assets/images/loader.gif';
 import './Skills.css';
 import axios from 'axios';
+import { Helmet } from 'react-helmet';
 
 export default class Skills extends React.Component{
 
@@ -23,6 +24,10 @@ export default class Skills extends React.Component{
         if (loading){
             return (
                 <div className="container">
+                    <Helmet>
+                        <title>Loading...</title>
+                        <meta name="description" content="Irish web developer and programmer, capable in a wide variety of skills and languages. Check me out!" />
+                    </Helmet>
                     <div className="skillsPurpleBackground" style={{height: '100vh'}}>
                         <div className="loadingScreenWrapper">
                         <div className="loadingScreenTitle">Loading...</div>
@@ -36,6 +41,10 @@ export default class Skills extends React.Component{
         else {
             return (
                 <div className="container">
+                    <Helmet>
+                        <title>What I Know - Skills</title>
+                        <meta name="description" content="A wide variety of skills that I can program in, check them out and see if we match!" />
+                    </Helmet>
                     <p className="skillsTitle">Skills</p>
                     <p className="skillsSubtitle">This is what I've worked with.</p>
                     <div className="skillsPurpleBackground">

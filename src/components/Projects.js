@@ -11,6 +11,7 @@ import vue from '../assets/images/vue.svg';
 import './Projects.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 
 export default class Projects extends React.Component{
@@ -62,6 +63,10 @@ export default class Projects extends React.Component{
         if (loading){
             return (
                 <div className="container">
+                    <Helmet>
+                        <title>Loading...</title>
+                        <meta name="description" content="Irish web developer and programmer, capable in a wide variety of skills and languages. Check me out!" />
+                    </Helmet>
                     <div className="projectsPurpleBottomBackground" style={{height: '100vh'}}>
                         <div className="loadingScreenWrapper">
                         <div className="loadingScreenTitle">Loading...</div>
@@ -74,6 +79,10 @@ export default class Projects extends React.Component{
         } else {
             return (
                 <div className="container">
+                    <Helmet>
+                        <title>What I've Made - Projects</title>
+                        <meta name="description" content="Here's a bunch of cool and creative websites and programs I've made, check them out!" />
+                    </Helmet>
                     <div className="projectsPurpleTopBackground" />
                     <p className="projectsTitle">Projects</p>
                     <p className="projectsSubtitle">Take a look at what I've been working on.</p>

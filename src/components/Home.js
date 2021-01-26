@@ -5,6 +5,7 @@ import cogs from '../assets/images/cogs.svg';
 import github from '../assets/images/github.svg';
 import {Link} from 'react-router-dom';
 import './Home.css';
+import {Helmet} from 'react-helmet';
 
 
 export default class Home extends React.Component{
@@ -12,6 +13,10 @@ export default class Home extends React.Component{
     render(){
         return (
             <main className="container">
+                <Helmet>
+                <title>Irish Developer - Shane Keenan</title>
+                <meta name="description" content="Irish web developer and programmer, capable in a wide variety of skills and languages. Check me out!" />
+                </Helmet>
                 <div className="homepageWhiteBackground">
                     <img src={me} alt="Shane Keenan" className="homepageImage" />
                     <p className="homepageTitle">Shane Keenan</p>
