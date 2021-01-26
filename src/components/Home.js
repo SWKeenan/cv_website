@@ -11,7 +11,7 @@ export default class Home extends React.Component{
 
     render(){
         return (
-            <div className="container">
+            <main className="container">
                 <div className="homepageWhiteBackground">
                     <img src={me} alt="Shane Keenan" className="homepageImage" />
                     <p className="homepageTitle">Shane Keenan</p>
@@ -40,7 +40,7 @@ export default class Home extends React.Component{
                         </div>
                     </div>
                 </div>
-            </div>
+            </main>
         )
     }
 }
